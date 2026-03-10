@@ -56,7 +56,6 @@ class Pessoa:
         self.altura = altura
         self.peso = peso
         self.energia = 100  
-        self.a_dormir = False
         
     def comer(self, alimento: list[str]):
         for item in alimento:
@@ -74,18 +73,3 @@ class Pessoa:
             self.altura += 0.025
     def crescer(self):
         pass
-    
-    def dormir(self):
-        if not self.a_dormir:
-            self.a_dormir = True
-            print(f"{self.nome} foi dormir.")
-        else:
-            print(f"{self.nome} já está a dormir.")
-    
-    def acordar(self):
-        if self.a_dormir:
-            self.a_dormir = False
-            self.energia = 100
-            print(f"{self.nome} acordou cheio de energia!")
-        else:
-            print(f"{self.nome} já está acordado.")
